@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Extract the archive with ZIP_PASSWORD
         shell: bash
-        run: unzip -P ${{ ZIP_PASSWORD }} -d dist archive.zip
+        run: unzip -P ${{ secrets.ZIP_PASSWORD }} -d dist archive.zip
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
